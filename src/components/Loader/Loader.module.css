@@ -1,0 +1,63 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accent {
+  border-color: var(--brand);
+}
+
+.contrast {
+  border-color: var(--white);
+}
+
+.circle {
+  border-radius: 50%;
+  border-style: solid;
+  border-right-color: transparent;
+  animation: loader 1.2s linear infinite;
+  transform: rotate(35deg);
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.l {
+  width: 60px;
+  height: 60px;
+}
+
+.l .circle {
+  height: 40px;
+  width: 40px;
+  border-width: 5px;
+}
+
+.m {
+  width: 48px;
+  height: 48px;
+}
+
+.m .circle {
+  height: 32px;
+  width: 32px;
+  border-width: 4px;
+}
+
+.s {
+  width: 24px;
+  height: 24px;
+}
+.s .circle {
+  height: 16px;
+  width: 16px;
+  border-width: 2px;
+}

@@ -1,0 +1,82 @@
+@import '/fonts/Roboto/fonts.css';
+
+:root {
+  /* Colors */
+  --brand: #518581;
+  --brand-hover: #86aaa7;
+  --brand-active: #487773;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #afadb5;
+  --silver: #d9d9d9;
+
+  --color-loader-bg: var(--brand);
+  --color-button-primary-bg: var(--brand);
+  --color-button-primary-text: var(--white);
+  --color-button-primary-bg-hover: var(--brand-hover);
+  --color-button-primary-text-hover: var(--white);
+  --color-button-primary-bg-disabled: var(--silver);
+  --color-button-primary-text-disabled: var(--white);
+  --color-button-primary-bg-active: var(--brand-active);
+  --color-button-primary-text-active: var(--white);
+  --color-text-primary: var(--black);
+  --color-text-secondary: var(--gray);
+  --color-text-accent: var(--brand);
+  --color-input-text: var(--black);
+  --color-input-bg: var(--white);
+  --color-input-placeholder: var(--gray);
+  --color-input-border: var(--white);
+  --color-input-bg-focus: var(--white);
+  --color-input-border-focus: var(--brand);
+  --color-input-text-focus: var(--black);
+  --color-input-bg-disabled: var(--white);
+  --color-input-border-disabled: var(--white);
+  --color-input-text-disabled: rgba(0, 0, 0, 0.2);
+  --color-checkbox-bg: var(--white);
+  --color-checkbox-border: var(--white);
+  --color-checkbox-bg-hover: var(--white);
+  --color-checkbox-border-hover: var(--brand);
+  --color-checkbox-bg-disabled: rgba(255, 255, 255, 0.5);
+  --color-checkbox-border-disabled: rgba(255, 255, 255, 0);
+  --color-checkbox-check: var(--brand);
+  --color-checkbox-check-hover: var(--brand);
+  --color-checkbox-check-disabled: rgba(0,0,0, 0.2);
+  --color-card-image-bg: var(--silver);
+  --color-card-bg: var(--white);
+  --color-dropdown-options-bg: var(--white);
+
+  /* Spacing */
+  --space-xl: 24px;
+  --space-l: 20px;
+  --space-m: 16px;
+  --space-s: 14px;
+  --space-xs: 12px;
+  --space-xxs: 8px;
+
+  /* Border Radius */
+  --border-radius: 0px;
+}
+
+html,
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+pre {
+  margin: 0;
+}

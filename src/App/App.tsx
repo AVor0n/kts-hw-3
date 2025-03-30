@@ -1,0 +1,12 @@
+import { Button } from 'src/components';
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  );
+}
+
+export default App;
