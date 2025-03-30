@@ -25,7 +25,8 @@
     "baseUrl": ".",
     "paths": {
       "pages": ["src/App/pages"],
-      "components": ["src/components"]
+      "components": ["src/components"],
+      "services": ["src/services"]
     }
   },
   "include": ["src"]
