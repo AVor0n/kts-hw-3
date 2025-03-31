@@ -1,6 +1,6 @@
+import { ArrowDownIcon } from 'src/components/icons';
+import { CheckIcon } from 'src/components/icons';
 import { type IconProps } from './Icon';
-import { CheckIcon } from './CheckIcon';
-import { ArrowDownIcon } from './ArrowDownIcon';
 
 export default {
   title: 'Icons',
