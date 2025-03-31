@@ -13,6 +13,7 @@
   height: 52px;
   border: none;
   outline: none;
+  border-radius: 10px;
 }
 
 .button:not(:disabled):hover {

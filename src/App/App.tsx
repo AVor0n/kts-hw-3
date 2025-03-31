@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<MainPage />} />
           <Route path="/details/:id" element={<DetailsPage />} />
           {/* TODO добавить 404 */}

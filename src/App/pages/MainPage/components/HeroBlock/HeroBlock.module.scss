@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  inline-size: 100%;
+  block-size: 570px;
+  margin: auto;
+  padding-block-end: 20px;
+  background-image: url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  inline-size: 300px;
+  block-size: 184px;
+  background-image: url('/images/title.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}

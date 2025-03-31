@@ -8,6 +8,7 @@
   background-color: var(--color-input-bg);
   border: 1px solid var(--color-input-border);
   outline: none;
+  border-radius: 10px;
 }
 
 .wrapper:focus-within {

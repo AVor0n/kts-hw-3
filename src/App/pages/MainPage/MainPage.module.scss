@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-content: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  inline-size: 100%;
+}
+
+.searchInputWrapper {
+  inline-size: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px 80px;
+}
+
+.caption {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.cardContent {
+  min-block-size: 100px;
+}

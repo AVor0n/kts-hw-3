@@ -24,11 +24,12 @@
 .contentWrapper {
   display: flex;
   justify-content: center;
-  max-inline-size: 1440px;
+  inline-size: 100%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  max-inline-size: 1440px;
   overflow: auto;
 }

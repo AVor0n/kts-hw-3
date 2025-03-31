@@ -5,6 +5,8 @@
   background-color: var(--color-card-bg);
   gap: 26px;
   font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card:hover {
