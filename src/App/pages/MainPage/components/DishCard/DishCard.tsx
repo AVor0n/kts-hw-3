@@ -1,9 +1,9 @@
-import { ClockIcon } from 'src/components/icons';
-import { Card, Text, Button } from 'components';
-import type { Dish } from 'src/types/data-contracts';
-import { Colors } from 'src/styles/constants';
-import styles from './DishCard.module.scss';
 import { useNavigate } from 'react-router';
+import { Card, Text, Button, ClockIcon } from 'components';
+import { Colors } from 'styles';
+import type { Dish } from 'types';
+import styles from './DishCard.module.scss';
+
 interface DishCardProps {
   dish: Dish;
 }

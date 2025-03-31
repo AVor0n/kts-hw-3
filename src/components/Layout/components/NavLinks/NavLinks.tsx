@@ -1,8 +1,8 @@
-import { NavLink } from 'react-router';
-import styles from './NavLinks.module.scss';
 import clsx from 'clsx';
+import { NavLink } from 'react-router';
 import { HeartIcon, UserIcon } from 'src/components/icons';
 import { Colors } from 'src/styles/constants';
+import styles from './NavLinks.module.scss';
 
 const links = [
   { label: 'Home', to: '/' },
@@ -18,28 +18,22 @@ const icons = [
   { label: 'Profile', to: '/profile', icon: <UserIcon fill={Colors.brand} /> },
 ];
 
-export const NavLinks = () => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.links}>
-        {links.map(link => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            className={({ isActive }) => clsx(styles.link, isActive && styles.active)}
-          >
-            {link.label}
-          </NavLink>
-        ))}
-      </div>
-
-      <div className={styles.icons}>
-        {icons.map(icon => (
-          <NavLink key={icon.to} className={styles.icon} to={icon.to}>
-            {icon.icon}
-          </NavLink>
-        ))}
-      </div>
+export const NavLinks = () => (
+  <div className={styles.container}>
+    <div className={styles.links}>
+      {links.map(link => (
+        <NavLink key={link.to} to={link.to} className={({ isActive }) => clsx(styles.link, isActive && styles.active)}>
+          {link.label}
+        </NavLink>
+      ))}
     </div>
-  );
-};
+
+    <div className={styles.icons}>
+      {icons.map(icon => (
+        <NavLink key={icon.to} className={styles.icon} to={icon.to}>
+          {icon.icon}
+        </NavLink>
+      ))}
+    </div>
+  </div>
+);

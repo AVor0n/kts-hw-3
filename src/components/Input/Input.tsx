@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
 import clsx from 'clsx';
+import React, { useRef } from 'react';
 import styles from './Input.module.css';
 
 export type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'> & {

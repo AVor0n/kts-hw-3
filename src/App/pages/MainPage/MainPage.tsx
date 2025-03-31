@@ -1,10 +1,10 @@
-import { Button, Input, MultiDropdown, Text, SearchIcon, Loader } from 'components';
-import { DishCard, HeroBlock } from './components';
 import { useEffect, useState } from 'react';
-import { Colors } from 'src/styles/constants';
-import styles from './MainPage.module.scss';
+import { Button, Input, MultiDropdown, Text, SearchIcon, Loader } from 'components';
 import { api } from 'services';
-import type { Dish } from 'src/types/data-contracts';
+import { Colors } from 'styles';
+import type { Dish } from 'types';
+import { DishCard, HeroBlock } from './components';
+import styles from './MainPage.module.scss';
 
 export const MainPage = () => {
   const [search, setSearch] = useState('');

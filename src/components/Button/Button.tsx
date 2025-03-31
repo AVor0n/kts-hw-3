@@ -1,5 +1,5 @@
-import { Loader } from '../Loader';
 import clsx from 'clsx';
+import { Loader } from '../Loader';
 import styles from './Button.module.css';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -9,7 +9,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
 };
 
-export const Button: React.FC<ButtonProps> = ({ children, loading, className, disabled, onClick, ...props }) => (
+export const Button = ({ children, loading, className, disabled, onClick, ...props }: ButtonProps) => (
   <button
     className={clsx(styles.button, className, {
       [styles.disabled]: disabled,

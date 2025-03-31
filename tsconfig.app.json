@@ -26,7 +26,10 @@
     "paths": {
       "pages": ["src/App/pages"],
       "components": ["src/components"],
-      "services": ["src/services"]
+      "services": ["src/services"],
+      "types": ["src/types"],
+      "styles": ["src/styles"],
+      "utils": ["src/utils"]
     }
   },
   "include": ["src"]

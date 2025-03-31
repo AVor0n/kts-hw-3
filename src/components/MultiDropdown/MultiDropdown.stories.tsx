@@ -22,7 +22,7 @@ export default {
       mapping: {
         true: true,
         false: false,
-        undefined: undefined,
+        undefined,
       },
       control: 'boolean',
     },

@@ -1,7 +1,4 @@
-import { query, where } from 'firebase/firestore';
-import { getDocs } from 'firebase/firestore';
-import { collection } from 'firebase/firestore';
-import { getFirestore } from 'firebase/firestore';
+import { query, where, getDocs, collection, getFirestore } from 'firebase/firestore';
 import { firebaseApp } from 'src/services/firebase';
 import type { Dish } from 'src/types/data-contracts';
 

@@ -1,8 +1,7 @@
-import * as React from 'react';
 import clsx from 'clsx';
 import styles from './Text.module.css';
 
-export type TextProps = {
+export interface TextProps {
   /** Дополнительный класс */
   className?: string;
   /** Стиль отображения */
@@ -17,7 +16,7 @@ export type TextProps = {
   color?: 'primary' | 'secondary' | 'accent';
   /** Максимальное кол-во строк */
   maxLines?: number;
-};
+}
 
 export const Text: React.FC<TextProps> = ({ className, view, tag, weight, color, maxLines, children }) => {
   const Tag = tag || 'span';

@@ -1,13 +1,13 @@
-import * as React from 'react';
 import clsx from 'clsx';
 import styles from './Icon.module.css';
+import type * as React from 'react';
 
-export type IconProps = {
+export interface IconProps {
   className?: string;
   color?: 'primary' | 'secondary' | 'accent' | 'tertiary';
   width?: number;
   height?: number;
-};
+}
 
 export const Icon: React.FC<React.PropsWithChildren<IconProps>> = ({
   children,

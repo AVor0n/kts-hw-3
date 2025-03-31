@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import { Input } from '../Input';
+import { useEffect, useState } from 'react';
 import { ArrowDownIcon } from '../icons';
+import { Input } from '../Input';
 import styles from './MultiDropdown.module.css';
 
-export type Option = {
+export interface Option {
   /** Ключ варианта, используется для отправки на бек/использования в коде */
   key: string;
   /** Значение варианта, отображается пользователю */
   value: string;
-};
+}
 
 /** Пропсы, которые принимает компонент Dropdown */
-export type MultiDropdownProps = {
+export interface MultiDropdownProps {
   className?: string;
   /** Массив возможных вариантов для выбора */
   options: Option[];
@@ -24,16 +24,9 @@ export type MultiDropdownProps = {
   disabled?: boolean;
   /** Возвращает строку которая будет выводится в инпуте. В случае если опции не выбраны, строка должна отображаться как placeholder. */
   getTitle: (value: Option[]) => string;
-};
+}
 
-export const MultiDropdown: React.FC<MultiDropdownProps> = ({
-  className,
-  value,
-  onChange,
-  options,
-  disabled,
-  getTitle,
-}) => {
+export const MultiDropdown = ({ className, value, onChange, options, disabled, getTitle }: MultiDropdownProps) => {
   const [open, setOpen] = useState(false);
   const [filter, setFilter] = useState('');
   const hasValue = value.length > 0;

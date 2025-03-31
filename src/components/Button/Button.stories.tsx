@@ -14,7 +14,7 @@ export default {
       mapping: {
         true: true,
         false: false,
-        undefined: undefined,
+        undefined,
       },
     },
     loading: {
@@ -24,7 +24,7 @@ export default {
       mapping: {
         true: true,
         false: false,
-        undefined: undefined,
+        undefined,
       },
     },
     children: {

@@ -11,20 +11,20 @@ export default {
     value: {
       control: 'text',
       mapping: {
-        undefined: undefined,
+        undefined,
       },
     },
     placeholder: {
       control: 'text',
       mapping: {
-        undefined: undefined,
+        undefined,
       },
     },
     disabled: {
       mapping: {
         true: true,
         false: false,
-        undefined: undefined,
+        undefined,
       },
       control: 'boolean',
     },

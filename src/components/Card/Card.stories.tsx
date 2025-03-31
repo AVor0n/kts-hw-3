@@ -14,20 +14,20 @@ export default {
     },
     captionSlot: {
       mapping: {
-        undefined: undefined,
+        undefined,
       },
       control: 'text',
     },
     title: {
       mapping: {
-        undefined: undefined,
+        undefined,
       },
       control: 'text',
       defaultValue: 'Заголовок карточки в несколько строк Заголовок карточки в несколько строк',
     },
     subtitle: {
       mapping: {
-        undefined: undefined,
+        undefined,
       },
       control: 'text',
       defaultValue:
@@ -35,7 +35,7 @@ export default {
     },
     contentSlot: {
       mapping: {
-        undefined: undefined,
+        undefined,
       },
       control: 'text',
     },

@@ -1,12 +1,11 @@
-import { ArrowLeftIcon, DishIcon, Loader, Text } from 'components';
+import { useEffect, useState } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router';
-import { Colors } from 'src/styles/constants';
-import styles from './DetailsPage.module.scss';
-import { useEffect } from 'react';
+import { ArrowLeftIcon, DishIcon, Loader, Text } from 'components';
 import { api } from 'services';
-import { useState } from 'react';
-import type { Dish } from 'src/types/data-contracts';
-import { Property, Section } from 'src/App/pages/DetailsPage/components';
+import { Colors } from 'styles';
+import type { Dish } from 'types';
+import { Property, Section } from './components';
+import styles from './DetailsPage.module.scss';
 
 export const DetailsPage = () => {
   const { id } = useParams();
@@ -16,7 +15,6 @@ export const DetailsPage = () => {
   useEffect(() => {
     if (id) {
       api.getPlate(id).then(d => {
-        console.log(d);
         setDish(d);
       });
     }
@@ -29,7 +27,7 @@ export const DetailsPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button onClick={() => navigate(-1)} className={styles.backLink}>
+        <button type="button" onClick={() => navigate(-1)} className={styles.backLink}>
           <ArrowLeftIcon stroke={Colors.brand} />
           <Text view="title">{dish ? dish.name : 'Back'}</Text>
         </button>
@@ -41,7 +39,7 @@ export const DetailsPage = () => {
         ) : (
           <div className={styles.content}>
             <div className={styles.columns}>
-              <img className={styles.image} src={`/data/${(+dish.id % 6) + 1}.jpg`} alt={dish?.name} />
+              <img className={styles.image} src={`/data/${(+dish.id % 6) + 1}.jpg`} alt={dish.name} />
               <div className={styles.info}>
                 <Property title="Preparation" value={dish.preparationTime} />
                 <Property title="Cooking" value={dish.cookingTime} />
@@ -52,13 +50,13 @@ export const DetailsPage = () => {
               </div>
             </div>
             <div className={styles.description}>
-              <Text view="p-20">{dish?.description}</Text>
+              <Text view="p-20">{dish.description}</Text>
             </div>
 
             <Section title="Ingredients">
               <div className={styles.ingredients}>
-                {dish?.ingredients.map(ingredient => (
-                  <div className={styles.ingredient}>
+                {dish.ingredients.map(ingredient => (
+                  <div className={styles.ingredient} key={ingredient}>
                     <DishIcon fill={Colors.brand} />
                     <Text view="p-16">{ingredient}</Text>
                   </div>
@@ -68,8 +66,8 @@ export const DetailsPage = () => {
 
             <Section title="Directions">
               <div className={styles.directions}>
-                {dish?.directions.map((direction, idx) => (
-                  <Section title={`Step ${idx + 1}`} level="2" className={styles.step}>
+                {dish.directions.map((direction, idx) => (
+                  <Section title={`Step ${idx + 1}`} level="2" className={styles.step} key={idx}>
                     <Text view="p-16">{direction}</Text>
                   </Section>
                 ))}
