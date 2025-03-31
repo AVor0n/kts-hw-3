@@ -1,55 +1,24 @@
-import { Button, Card, Input, MultiDropdown, Text, SearchIcon, ClockIcon } from 'components';
-import { HeroBlock } from './components';
-import { useState } from 'react';
+import { Button, Input, MultiDropdown, Text, SearchIcon, Loader } from 'components';
+import { DishCard, HeroBlock } from './components';
+import { useEffect, useState } from 'react';
 import { Colors } from 'src/styles/constants';
 import styles from './MainPage.module.scss';
-
-const items = [
-  {
-    id: 1,
-    image: '/data/1.jpg',
-    title: 'Title',
-    calories: 100,
-    cookingTime: 10,
-    ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
-  },
-  {
-    id: 2,
-    image: '/data/2.jpg',
-    title: 'Title',
-    calories: 100,
-    cookingTime: 10,
-    ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
-  },
-  {
-    id: 3,
-    image: '/data/3.jpg',
-    title: 'Title',
-    calories: 100,
-    cookingTime: 10,
-    ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
-  },
-  {
-    id: 4,
-    image: '/data/4.jpg',
-    title: 'Title',
-    calories: 100,
-    cookingTime: 10,
-    ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
-  },
-  {
-    id: 5,
-    image: 'https://via.placeholder.com/150',
-    title: 'Title',
-    calories: 100,
-    cookingTime: 10,
-    ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
-  },
-];
+import { api } from 'services';
+import type { Dish } from 'src/types/data-contracts';
 
 export const MainPage = () => {
   const [search, setSearch] = useState('');
-  console.log(123);
+  const [isLoading, setIsLoading] = useState(false);
+  const [dishes, setDishes] = useState<Dish[]>([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    api
+      .getPlates()
+      .then(setDishes)
+      .finally(() => setIsLoading(false));
+  }, []);
+
   return (
     <div className={styles.container}>
       <HeroBlock />
@@ -88,32 +57,13 @@ export const MainPage = () => {
       </div>
 
       <div className={styles.grid}>
-        {items.map(item => (
-          <Card
-            key={item.id}
-            image={item.image}
-            title={item.title}
-            subtitle={
-              <Text view="p-16" color="secondary" className={styles.cardContent}>
-                {item.ingredients.join(' + ')}
-              </Text>
-            }
-            captionSlot={
-              <div className={styles.caption}>
-                <ClockIcon fill={Colors.brand} />
-                <Text view="p-16" color="secondary">
-                  {`${item.cookingTime} minutes`}
-                </Text>
-              </div>
-            }
-            contentSlot={
-              <Text view="p-18" color="accent" weight="bold">
-                {`${item.calories} kcal`}
-              </Text>
-            }
-            actionSlot={<Button onClick={() => {}}>Save</Button>}
-          />
-        ))}
+        {isLoading ? (
+          <div className={styles.loaderWrapper}>
+            <Loader />
+          </div>
+        ) : (
+          dishes.map(dish => <DishCard dish={dish} key={dish.id} />)
+        )}
       </div>
     </div>
   );
