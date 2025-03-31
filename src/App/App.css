@@ -40,7 +40,7 @@
   --color-checkbox-border-disabled: rgba(255, 255, 255, 0);
   --color-checkbox-check: var(--brand);
   --color-checkbox-check-hover: var(--brand);
-  --color-checkbox-check-disabled: rgba(0,0,0, 0.2);
+  --color-checkbox-check-disabled: rgba(0, 0, 0, 0.2);
   --color-card-image-bg: var(--silver);
   --color-card-bg: var(--white);
   --color-dropdown-options-bg: var(--white);

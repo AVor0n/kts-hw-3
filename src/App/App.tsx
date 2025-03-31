@@ -1,11 +1,5 @@
-import { Button, UserIcon } from 'src/components';
+import { Button } from 'src/components';
 import './App.css';
-import { useEffect, useState } from 'react';
-import { getDocs } from 'firebase/firestore';
-import { collection } from 'firebase/firestore';
-import { getDoc } from 'firebase/firestore';
-import { doc } from 'firebase/firestore';
-import { getFirestore } from 'firebase/firestore';
 
 function App() {
   // const [plate, setPlate] = useState<unknown>(null);
