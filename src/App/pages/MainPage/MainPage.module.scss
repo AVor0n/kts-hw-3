@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 64px 80px;
-  justify-content: space-between;
+  align-self: anchor-center;
 }
 
 .loaderWrapper {
