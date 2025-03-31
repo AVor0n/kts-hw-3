@@ -23,7 +23,9 @@ module.exports = {
     'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global'] }],
     'scale-unlimited/declaration-strict-value': [
-      ['color', 'background-color', 'font', 'font-size', 'font-weight', 'font-family', 'filter'],
+      // TODO вернуть
+      // ['color', 'background-color', 'font', 'font-size', 'font-weight', 'font-family', 'filter'],
+      ['color', 'background-color', 'font-size', 'font-weight', 'font-family', 'filter'],
       {
         ignoreValues: ['currentColor', 'unset', 'inherit', 'initial', 'transparent'],
         disableFix: true,

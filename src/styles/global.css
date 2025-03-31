@@ -2,14 +2,15 @@
 
 :root {
   /* Colors */
-  --brand: #518581;
-  --brand-hover: #86aaa7;
-  --brand-active: #487773;
+  --brand: #b5460f;
+  --brand-hover: rgba(181, 70, 15, 0.7);
+  --brand-active: #872d01;
   --black: #000000;
   --white: #ffffff;
   --gray: #afadb5;
   --silver: #d9d9d9;
 
+  --color-background: rgba(255, 192, 118, 0.23);
   --color-loader-bg: var(--brand);
   --color-button-primary-bg: var(--brand);
   --color-button-primary-text: var(--white);
@@ -55,6 +56,9 @@
 
   /* Border Radius */
   --border-radius: 0px;
+
+  /* Fonts */
+  --font-logo: normal 700 20px/120% 'Roboto';
 }
 
 html,
@@ -62,6 +66,7 @@ body {
   font-family: 'Roboto';
   margin: 0;
   padding: 0;
+  background-color: var(--color-background);
 }
 
 * {

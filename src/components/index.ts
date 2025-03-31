@@ -6,3 +6,4 @@ export * from './Input';
 export * from './Loader';
 export * from './MultiDropdown';
 export * from './Text';
+export * from './Layout';
