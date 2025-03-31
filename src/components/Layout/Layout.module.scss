@@ -17,6 +17,7 @@
   gap: 80px;
   justify-content: space-between;
   align-items: center;
+  inline-size: 100%;
   max-inline-size: 1440px;
   min-block-size: 64px;
 }
@@ -30,6 +31,7 @@
 .content {
   display: flex;
   flex-direction: column;
+  inline-size: 100%;
   max-inline-size: 1440px;
   overflow: auto;
 }

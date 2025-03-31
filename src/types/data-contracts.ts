@@ -7,7 +7,7 @@ export interface Dish {
   directions: string[];
   preparationTime: number;
   cookingTime: number;
-  ratings: number;
+  rating: number;
   likes: number;
   servings: number;
 }

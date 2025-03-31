@@ -1,3 +1,4 @@
+export { default as ArrowLeftIcon } from './arrowLeft.svg?react';
 export { default as ArrowDownIcon } from './arrowDown.svg?react';
 export { default as CheckIcon } from './check.svg?react';
 export { default as ClockIcon } from './clock.svg?react';

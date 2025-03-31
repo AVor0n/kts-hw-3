@@ -29,7 +29,6 @@ const directions = [
 
 const dishes = [
     {
-        id: '1',
         name: 'Pancakes With Berries',
         preparationTime: 15,
         cookingTime: 45,
@@ -43,7 +42,6 @@ const dishes = [
             "Pancake Breakfast Casserole takes around 9 hours and 20 minutes from beginning to end. One portion of this dish contains approximately 13g  of protein, 19g of fat, and a total of 499 calories. For $2.33 per serving, this recipe covers 19% of your daily requirements of vitamins and minerals. This recipe serves 8. It works well as a main course. 3369 people were glad they tried this recipe. It is brought to you by Foodnetwork. It is a good option if you're following a lacto ovo vegetarian diet. If you have sugar, baking soda, eggs, and a few other ingredients on hand, you can make it. It is perfect for Christmas. Taking all factors into account, this recipe earns a spoonacular score of 65%, which is pretty good. Similar recipes are Pancake Breakfast Casserole, Pancake Breakfast Casserole, and Pancake Breakfast Casserole.",
     },
     {
-        id: '2',
         name: 'Scrambled eggs with meat and tosts',
         preparationTime: 10,
         cookingTime: 60,
@@ -65,7 +63,6 @@ const dishes = [
         rating: 5,
     },
     {
-        id: '3',
         name: 'Pancakes with raspberries',
         preparationTime: 50,
         cookingTime: 30,
@@ -103,15 +100,9 @@ const dishes = [
 
 const promises = [];
 
-for (let i = 0; i < 10; i++) {
-    promises.push(
-        dishes.map((dish, idx) =>
-            addDish({
-                ...dish,
-                id: `${i * 3 + idx}`,
-            }),
-        ),
-    );
+for (let i = 0; i < 15; i++) {
+    const dish = dishes[i % dishes.length];
+    promises.push(addDish({ id: i.toString(), ...dish }));
 }
 
 await Promise.all(promises);

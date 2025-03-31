@@ -27,12 +27,12 @@ export const DishCard = ({ dish }: DishCardProps) => {
         </Text>
       }
       captionSlot={
-        <div className={styles.caption}>
+        <span className={styles.caption}>
           <ClockIcon fill={Colors.brand} />
           <Text view="p-16" color="secondary">
             {`${dish.preparationTime + dish.cookingTime} minutes`}
           </Text>
-        </div>
+        </span>
       }
       contentSlot={
         <Text view="p-18" color="accent" weight="bold">

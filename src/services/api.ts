@@ -1,5 +1,5 @@
-import { doc } from 'firebase/firestore';
-import { getDoc, getDocs } from 'firebase/firestore';
+import { query, where } from 'firebase/firestore';
+import { getDocs } from 'firebase/firestore';
 import { collection } from 'firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
 import { firebaseApp } from 'src/services/firebase';
@@ -10,12 +10,16 @@ class Api {
 
   async getPlate(id: string) {
     const db = getFirestore(firebaseApp);
-    const docRef = doc(db, this.collectionName, id);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      return docSnap.data() as Dish;
+    const platesCol = collection(db, this.collectionName);
+    const q = query(platesCol, where('id', '==', id));
+    const platesSnapshot = await getDocs(q);
+
+    if (platesSnapshot.empty) {
+      return null;
     }
-    return null;
+
+    const dish = platesSnapshot.docs[0].data();
+    return dish as Dish;
   }
 
   async getPlates() {
@@ -23,7 +27,7 @@ class Api {
     const platesCol = collection(db, this.collectionName);
     const platesSnapshot = await getDocs(platesCol);
     const platesList = platesSnapshot.docs.map(doc => doc.data() as Dish);
-    return platesList;
+    return platesList.sort((a, b) => +a.id - +b.id);
   }
 }
 
