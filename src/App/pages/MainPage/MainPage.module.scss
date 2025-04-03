@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-content: center;
+  padding-block-end: 50px;
+}
+
+.description {
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  inline-size: 100%;
+}
+
+.searchInputWrapper {
+  inline-size: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px 80px;
+  align-self: anchor-center;
+}
+
+.loaderWrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 300px;
+}

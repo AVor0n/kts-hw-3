@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  block-size: 100vh;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: 100%;
+  max-inline-size: 1440px;
+  min-block-size: 64px;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  inline-size: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  max-inline-size: 1440px;
+  overflow: auto;
+}

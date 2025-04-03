@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: 100%;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.link {
+  color: var(--color-text-primary);
+  font:
+    normal 400 16px / 125% Roboto,
+    sans-serif;
+  text-decoration: none;
+}
+
+.link.active {
+  color: var(--color-text-accent);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.icon {
+  display: flex;
+}
